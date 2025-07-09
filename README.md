@@ -1,3 +1,40 @@
+# After Action Report on Interview Challenge
+
+## Summary (tl,dr)
+This was a good challenge to help me better understand where my strengths and weaknesses are as a AI/ML engineer. I some areas that I need to improve on, however, in a real-world scenario I believe it is equally important to have the ability to leverage the technologies available. I understand that this can't be a crutch as will take this lesson and improve.
+
+## Sustainments
+1. The tasks were not to easy, but not too hard.
+2. The tasks allowed me to identify gaps in my knowledge
+3. I was able to update sections of my personal wiki
+
+## Improvements
+1. More reps. with pandas and matplotlib
+2. Challenge myself in the future to rely on AI less
+3. Workstation / Environment preparation, automations, and scripts.
+
+## Special Thanks!
+I want to take a moment of thanks and appreciation for the oppertunity and experience. This was both humbling and rewarding. I look forward to growing as a result of this experience. Thank you!
+
+## References
+https://www.geeksforgeeks.org/python/python-pandas-timestamp-isoformat/
+https://www.geeksforgeeks.org/python/python-pandas-to_datetime/
+https://www.geeksforgeeks.org/pandas/how-to-break-up-a-comma-separated-string-in-pandas-column/
+https://www.geeksforgeeks.org/python/count-the-number-of-rows-and-columns-of-a-pandas-dataframe/
+https://www.geeksforgeeks.org/python/apply-a-function-to-each-row-or-column-in-dataframe-using-pandas-apply/
+https://pandas.pydata.org/docs/getting_started/intro_tutorials/05_add_columns.html
+https://stackoverflow.com/questions/46218652/python-pandas-unique-value-ignoring-nan
+https://www.statology.org/pandas-unique-ignore-nan/
+https://www.geeksforgeeks.org/python/python-pandas-index-value_counts/
+https://www.analyticsvidhya.com/blog/2024/02/matplotlib-pyplot-hist-in-python/
+https://www.geeksforgeeks.org/pandas/bar-plot-in-matplotlib/
+https://www.geeksforgeeks.org/python/python-pandas-dataframe-mean/
+https://www.w3schools.com/python/pandas/ref_df_idxmax.asp
+https://www.w3schools.com/python/pandas/ref_df_max.asp
+
+I also utilized SANS SEC 595 Lab matterial, however, I can't reference that.
+
+---
 # Challenge: Ancient Tree Inventory (ATI) Extract, Transform, & Analyze
 
 ## Instructions
