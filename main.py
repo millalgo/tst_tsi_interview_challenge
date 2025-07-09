@@ -1,5 +1,6 @@
 import pandas as pd
 from datetime import datetime
+import matplotlib.pyplot as plt
 
 def dt_to_iso(dt):
 # https://www.geeksforgeeks.org/python/python-pandas-timestamp-isoformat/
@@ -58,5 +59,29 @@ ancient_trees = df[df['VeteranStatus'].str.lower() == 'ancient tree']
 unique_species = ancient_trees['Species'].dropna().unique()
 species_list = unique_species.tolist()
 print(f'\n{species_list}')
+
+# 2.2 Create a histogram showing the number of ancient trees per county.
+# https://www.geeksforgeeks.org/python/python-pandas-index-value_counts/
+# https://www.analyticsvidhya.com/blog/2024/02/matplotlib-pyplot-hist-in-python/
+# https://www.geeksforgeeks.org/pandas/bar-plot-in-matplotlib/
+
+"""
+This one confuses me because you ask for a histogram, however after a bunch of
+trial and error it made more sense that this data should be displayed as a bar chart
+in order to show the "count by value" to show  the number of trees per county.
+"""
+print(f'\n Generating Histogram of ancient trees...')
+county_counts = ancient_trees['County'].value_counts()
+
+plt.figure(figsize=(10,6))
+county_counts.plot(kind='bar')
+plt.title('Number of Ancient Trees per County')
+plt.xlabel('Tree Count', fontsize=12)
+plt.ylabel('Counties', fontsize=12)
+plt.xticks(rotation=45, ha='right', fontsize=3)
+plt.tight_layout()
+plt.savefig('ancient_trees_by_county.png', dpi=300, bbox_inches='tight')
+plt.show()
+print('Histogram "ancient_trees_by_county.png" has been generated.')
 
 print(f'\n{df}')
