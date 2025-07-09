@@ -15,6 +15,16 @@ def comma_separated_to_lists(value):
         return []
     return [item.strip() for item in str(value).split('.')]
 
+def is_publicly_accessable(value):
+    """
+    PublicAccessibilityStatus:
+        Public - open access (e.g. public park)
+        Private - visible from public access
+    """
+    if pd.isna(value):
+        return False
+    return str(value).lower().startswith('public')
+
 # 1.1 Ingest the data into Python
 df = pd.read_csv('data/2024-04-18_Ancient_Tree_Inventory.csv')
 
@@ -34,5 +44,10 @@ df['VerifiedDate'] = df['VerifiedDate'].apply(dt_to_iso)
 # 1.3.2 Convert any of the fields with comma-separated values to lists of vlaues.
 print('Converting comma-separated values')
 df['SpecialStatus'] = df['SpecialStatus'].apply(comma_separated_to_lists)
+
+# 1.3.3 Create a new column with a boolean value for whether the tree is accessible to the public
+# https://pandas.pydata.org/docs/getting_started/intro_tutorials/05_add_columns.html
+print('Generating column for if trees are publicly accessable')
+df['IsPubliclyAccessable'] = df['PublicAccessibilityStatus'].apply(is_publicly_accessable)
 
 print(df)
