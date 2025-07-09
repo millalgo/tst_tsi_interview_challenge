@@ -1,7 +1,8 @@
 # After Action Report on Interview Challenge
 
 ## Summary (tl,dr)
-This was a good challenge to help me better understand where my strengths and weaknesses are as a AI/ML engineer. I some areas that I need to improve on, however, in a real-world scenario I believe it is equally important to have the ability to leverage the technologies available. I understand that this can't be a crutch as will take this lesson and improve.
+This was a good challenge to help me better understand where my strengths and weaknesses are as a AI/ML engineer.
+I recognize there are some areas that I need to improve and enjoyed this interview challenge.
 
 ## Sustainments
 1. The tasks were not to easy, but not too hard.
