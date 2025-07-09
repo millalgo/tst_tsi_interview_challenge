@@ -84,4 +84,12 @@ plt.savefig('ancient_trees_by_county.png', dpi=300, bbox_inches='tight')
 plt.show()
 print('Histogram "ancient_trees_by_county.png" has been generated.')
 
+# 2.3 Output what percentage of ancient trees are both alive and standing
+alive_standing = ancient_trees[
+    (ancient_trees['LivingStatus'].str.lower() == 'alive') &
+    (ancient_trees['StandingStatus'].str.lower() == 'standing')
+]
+
+print(f'\nPercentage of Trees Alive and Standing: {len(alive_standing) / len(ancient_trees) * 100}')
+
 print(f'\n{df}')
