@@ -92,4 +92,18 @@ alive_standing = ancient_trees[
 
 print(f'\nPercentage of Trees Alive and Standing: {len(alive_standing) / len(ancient_trees) * 100}')
 
+# 2.4 Determine which species of tree has the largest average girth
+# https://www.geeksforgeeks.org/python/python-pandas-dataframe-mean/
+# https://www.w3schools.com/python/pandas/ref_df_idxmax.asp
+# https://www.w3schools.com/python/pandas/ref_df_max.asp
+"""
+Got assistance from my SANS SEC595 book, however, since I can't really use that
+as a reference I pulled some additional resources from the interwebs.
+"""
+average_girth_by_species = df.groupby("Species")["MeasuredGirth"].mean()
+largest_avg_girth_species = average_girth_by_species.idxmax()
+largest_avg_girth_value = average_girth_by_species.max()
+
+print(f'The {largest_avg_girth_species} has the largest average girth at {largest_avg_girth_value}')
+
 print(f'\n{df}')
